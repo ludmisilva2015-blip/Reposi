@@ -1,13 +1,18 @@
-# Catroid APK Converter
+# Catroid APK Converter — starter
 
-Projeto para transformar arquivos .catrobat do Pocket Code/Catrobat em aplicativos Android.
+Esta pasta contém a primeira API do projeto.
 
-## Objetivo
+## Executar
 
-Criar um serviço que receba um projeto .catrobat e gere um APK Android por meio de uma compilação real.
+```bash
+pip install -r backend/requirements.txt
+uvicorn backend.main:app --reload
+```
 
-## Status
+Abra `http://127.0.0.1:8000/docs`.
 
-Projeto inicial em desenvolvimento.
+Endpoints:
+- `GET /health`
+- `POST /analyze` — recebe um arquivo `.catrobat` e valida o pacote ZIP.
 
-A conversão real de APK ainda não está pronta.
+Esta versão ainda não gera APK.
